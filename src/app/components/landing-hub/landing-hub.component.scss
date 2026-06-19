@@ -1,0 +1,399 @@
+// Strict 3-color palette
+$color-black: #000000;
+$color-white: #FFFFFF;
+$color-red: #E63946;
+
+// Semi-transparent variations for hierarchy (derived from white/red)
+$color-text-secondary: rgba($color-white, 0.70);
+$color-text-muted: rgba($color-white, 0.40);
+$color-border-subtle: rgba($color-white, 0.08);
+$color-bg-card: rgba($color-white, 0.02);
+$color-bg-accent: rgba($color-red, 0.06);
+
+.hub-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+  background-color: $color-black;
+  color: $color-white;
+  box-sizing: border-box;
+  position: relative;
+  padding: 4rem 1.5rem 2rem 1.5rem;
+  font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  overflow-x: hidden;
+
+  // Modern grid background overlay
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+      linear-gradient(rgba($color-white, 0.015) 1px, transparent 1px),
+      linear-gradient(90deg, rgba($color-white, 0.015) 1px, transparent 1px);
+    background-size: 50px 50px;
+    background-position: center top;
+    pointer-events: none;
+    z-index: 1;
+  }
+}
+
+// Glowing accent top bar
+.accent-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, $color-red, transparent);
+  box-shadow: 0 0 15px rgba($color-red, 0.5);
+  z-index: 2;
+}
+
+// Header Section
+.header-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  z-index: 2;
+  margin-bottom: 2rem;
+  animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+
+  .logo-container {
+    margin-bottom: 1.5rem;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+    &:hover {
+      transform: scale(1.04);
+    }
+
+    .brand-logo {
+      height: 44px;
+      width: auto;
+      object-fit: contain;
+      filter: drop-shadow(0 0 15px rgba($color-red, 0.15));
+    }
+  }
+
+  .hub-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin: 0 0 0.5rem 0;
+    color: $color-white;
+
+    @media (min-width: 768px) {
+      font-size: 3.5rem;
+    }
+  }
+
+  .hub-subtitle {
+    font-size: 1rem;
+    color: $color-text-secondary;
+    margin: 0;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+
+    @media (min-width: 768px) {
+      font-size: 1.15rem;
+    }
+  }
+}
+
+// Main Content
+.content-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  z-index: 2;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 0 4rem 0;
+}
+
+// 3-Card Grid
+.cards-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  width: 100%;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+// Interactive Cards
+.hub-card {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  background-color: $color-bg-card;
+  border: 1px solid $color-border-subtle;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  opacity: 0;
+  animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+
+  // Staggered card entry
+  &:nth-child(1) { animation-delay: 0.15s; }
+  &:nth-child(2) { animation-delay: 0.30s; }
+  &:nth-child(3) { animation-delay: 0.45s; }
+
+  // Hover Glow effect
+  .card-glow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(800px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba($color-red, 0.04), transparent 40%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 1;
+  }
+
+  .card-content {
+    position: relative;
+    padding: 2.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    z-index: 2;
+  }
+
+  .icon-container {
+    width: 56px;
+    height: 56px;
+    background-color: $color-bg-card;
+    border: 1px solid $color-border-subtle;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba($color-white, 0.8);
+    margin-bottom: 2rem;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+
+    .card-icon {
+      width: 26px;
+      height: 26px;
+      transition: transform 0.4s ease;
+    }
+  }
+
+  .card-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 0 0.75rem 0;
+    color: $color-white;
+    letter-spacing: -0.01em;
+    transition: color 0.3s ease;
+  }
+
+  .card-description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: $color-text-secondary;
+    margin: 0 0 2rem 0;
+    flex-grow: 1;
+  }
+
+  // Footer visual action link in card
+  .card-action {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: $color-text-muted;
+    transition: all 0.3s ease;
+
+    .arrow-icon {
+      width: 16px;
+      height: 16px;
+      transform: translateX(0);
+      transition: transform 0.3s ease;
+    }
+  }
+
+  // Hover State
+  &:hover {
+    transform: translateY(-8px);
+    border-color: rgba($color-red, 0.4);
+    background-color: rgba($color-white, 0.03);
+    box-shadow: 0 15px 30px -10px rgba($color-red, 0.15);
+
+    .card-glow {
+      opacity: 1;
+    }
+
+    .icon-container {
+      background-color: $color-bg-accent;
+      border-color: rgba($color-red, 0.3);
+      color: $color-red;
+
+      .card-icon {
+        transform: scale(1.08);
+      }
+    }
+
+    .card-title {
+      color: $color-white;
+    }
+
+    .card-action {
+      color: $color-red;
+
+      .arrow-icon {
+        transform: translateX(6px);
+      }
+    }
+  }
+}
+
+// Footer
+.footer-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  border-top: 1px solid rgba($color-white, 0.05);
+  padding: 2rem 0;
+  text-align: center;
+  z-index: 2;
+  animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 0.6s;
+
+  .footer-text {
+    font-size: 0.85rem;
+    color: $color-text-muted;
+    margin: 0;
+    letter-spacing: 0.02em;
+  }
+}
+
+// Premium Navigation Overlay
+.navigation-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba($color-black, 0.92);
+  backdrop-filter: blur(15px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.4s ease forwards;
+
+  .overlay-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 400px;
+    padding: 2rem;
+    animation: scaleIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+
+  .overlay-logo-wrapper {
+    margin-bottom: 2rem;
+    animation: pulseLogo 2s infinite ease-in-out;
+
+    .overlay-logo {
+      height: 48px;
+      width: auto;
+    }
+  }
+
+  .overlay-status {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.25em;
+    color: $color-red;
+    margin: 0 0 0.5rem 0;
+  }
+
+  .overlay-title {
+    font-size: 1.75rem;
+    font-weight: 800;
+    margin: 0 0 2rem 0;
+    color: $color-white;
+  }
+
+  .overlay-loader {
+    width: 180px;
+    height: 3px;
+    background-color: rgba($color-white, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+
+    .loader-line {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 50%;
+      background-color: $color-red;
+      box-shadow: 0 0 10px $color-red;
+      border-radius: 10px;
+      animation: load 1s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    }
+  }
+}
+
+// Keyframes
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.94);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulseLogo {
+  0%, 100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 15px rgba($color-red, 0.15));
+  }
+  50% {
+    transform: scale(1.03);
+    filter: drop-shadow(0 0 25px rgba($color-red, 0.4));
+  }
+}
+
+@keyframes load {
+  0% {
+    left: -50%;
+  }
+  100% {
+    left: 100%;
+  }
+}

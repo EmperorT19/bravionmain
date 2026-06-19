@@ -1,0 +1,129 @@
+<div class="hub-container">
+  <!-- Glowing accent top bar -->
+  <div class="accent-bar"></div>
+
+  <!-- Header Area -->
+  <header class="header-wrapper">
+    <div class="logo-container">
+      <img src="logo.png" alt="Bravion Group Logo" class="brand-logo" />
+    </div>
+    <h1 class="hub-title">Bravion Group</h1>
+    <p class="hub-subtitle">Choose a site to continue</p>
+  </header>
+
+  <!-- Main 3-Card Grid -->
+  <main class="content-wrapper">
+    <div class="cards-grid">
+      <!-- Card 1: Bravion Printers -->
+      <a href="/bravionprinters/" 
+         class="hub-card" 
+         (click)="navigateTo($event, '/bravionprinters/', 'Bravion Printers')">
+        <div class="card-glow"></div>
+        <div class="card-content">
+          <div class="icon-container">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="card-icon">
+              <!-- Printer framework -->
+              <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" />
+              <path d="M6 9V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v5" />
+              <rect x="6" y="14" width="12" height="8" rx="1" />
+              <!-- CMYK circles -->
+              <circle cx="9" cy="18" r="0.8" fill="#E63946" stroke="none" />
+              <circle cx="12" cy="18" r="0.8" fill="#FFFFFF" stroke="none" />
+              <circle cx="15" cy="18" r="0.8" fill="#E63946" stroke="none" />
+            </svg>
+          </div>
+          <h2 class="card-title">Bravion Printers</h2>
+          <p class="card-description">Branding, design & printing solutions</p>
+          <div class="card-action">
+            <span>Enter Site</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="arrow-icon">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </div>
+        </div>
+      </a>
+
+      <!-- Card 2: Bravion Motors -->
+      <a href="/bravionmotors/" 
+         class="hub-card highlight-card" 
+         (click)="navigateTo($event, '/bravionmotors/', 'Bravion Motors')">
+        <div class="card-glow"></div>
+        <div class="card-content">
+          <div class="icon-container">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="card-icon">
+              <!-- Sleek car shape silhouette -->
+              <path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12.3v3.7c0 .6.4 1 1 1h2" />
+              <!-- Wheels -->
+              <circle cx="7" cy="17" r="2" />
+              <circle cx="17" cy="17" r="2" />
+              <!-- Ground line -->
+              <path d="M1 21h22" stroke-width="1" opacity="0.3" />
+            </svg>
+          </div>
+          <h2 class="card-title">Bravion Motors</h2>
+          <p class="card-description">Vehicle parts, service & maintenance</p>
+          <div class="card-action">
+            <span>Enter Site</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="arrow-icon">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </div>
+        </div>
+      </a>
+
+      <!-- Card 3: Bravion Technologies -->
+      <a href="/braviontechnologies/" 
+         class="hub-card" 
+         (click)="navigateTo($event, '/braviontechnologies/', 'Bravion Technologies')">
+        <div class="card-glow"></div>
+        <div class="card-content">
+          <div class="icon-container">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="card-icon">
+              <!-- CPU Microchip representation -->
+              <rect x="4" y="4" width="16" height="16" rx="2" />
+              <rect x="9" y="9" width="6" height="6" rx="1" />
+              <!-- Circuit paths/pins -->
+              <path d="M9 1v3M12 1v3M15 1v3" />
+              <path d="M9 20v3M12 20v3M15 20v3" />
+              <path d="M20 9h3M20 12h3M20 15h3" />
+              <path d="M1 9h3M1 12h3M1 15h3" />
+            </svg>
+          </div>
+          <h2 class="card-title">Bravion Technologies</h2>
+          <p class="card-description">Technology & digital solutions</p>
+          <div class="card-action">
+            <span>Enter Site</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="arrow-icon">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </div>
+        </div>
+      </a>
+    </div>
+  </main>
+
+  <!-- Footer Area -->
+  <footer class="footer-wrapper">
+    <p class="footer-text">© 2026 Bravion Group. All rights reserved.</p>
+  </footer>
+
+  <!-- Fullscreen Premium Navigation Overlay -->
+  @if (isNavigating) {
+    <div class="navigation-overlay">
+      <div class="overlay-content">
+        <div class="overlay-logo-wrapper">
+          <img src="logo.png" alt="Bravion Logo" class="overlay-logo" />
+        </div>
+        <p class="overlay-status">CONNECTING TO</p>
+        <h3 class="overlay-title">{{ navigationTarget }}</h3>
+        
+        <div class="overlay-loader">
+          <div class="loader-line"></div>
+        </div>
+      </div>
+    </div>
+  }
+</div>
