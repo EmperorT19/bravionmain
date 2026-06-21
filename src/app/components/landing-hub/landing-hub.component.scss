@@ -16,12 +16,12 @@ $color-bg-accent: rgba($color-red, 0.06);
   justify-content: space-between;
   align-items: center;
   min-height: 100vh;
-  background-color: $color-black;
+  background: linear-gradient(180deg, #FFFFFF 0%, #121212 55%, #000000 100%);
   color: $color-white;
   box-sizing: border-box;
   position: relative;
   padding: 4rem 1.5rem 2rem 1.5rem;
-  font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'YDYoonche', 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
   overflow-x: hidden;
 
   // Modern grid background overlay
@@ -33,8 +33,8 @@ $color-bg-accent: rgba($color-red, 0.06);
     width: 100%;
     height: 100%;
     background-image: 
-      linear-gradient(rgba($color-white, 0.015) 1px, transparent 1px),
-      linear-gradient(90deg, rgba($color-white, 0.015) 1px, transparent 1px);
+      linear-gradient(rgba($color-red, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba($color-red, 0.03) 1px, transparent 1px);
     background-size: 50px 50px;
     background-position: center top;
     pointer-events: none;
@@ -54,6 +54,33 @@ $color-bg-accent: rgba($color-red, 0.06);
   z-index: 2;
 }
 
+// Top Left Logo
+.top-left-logo-container {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  animation: fadeIn 0.8s ease both;
+
+  .top-left-logo {
+    height: 48px;
+    width: auto;
+    object-fit: contain;
+    transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+
+    &:hover {
+      transform: scale(1.04);
+    }
+  }
+
+  @media (max-width: 768px) {
+    position: static;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+}
+
 // Header Section
 .header-wrapper {
   display: flex;
@@ -64,28 +91,12 @@ $color-bg-accent: rgba($color-red, 0.06);
   margin-bottom: 2rem;
   animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
 
-  .logo-container {
-    margin-bottom: 1.5rem;
-    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-
-    &:hover {
-      transform: scale(1.04);
-    }
-
-    .brand-logo {
-      height: 44px;
-      width: auto;
-      object-fit: contain;
-      filter: drop-shadow(0 0 15px rgba($color-red, 0.15));
-    }
-  }
-
   .hub-title {
     font-size: 2.5rem;
     font-weight: 800;
     letter-spacing: -0.02em;
     margin: 0 0 0.5rem 0;
-    color: $color-white;
+    color: $color-black;
 
     @media (min-width: 768px) {
       font-size: 3.5rem;
@@ -94,9 +105,9 @@ $color-bg-accent: rgba($color-red, 0.06);
 
   .hub-subtitle {
     font-size: 1rem;
-    color: $color-text-secondary;
+    color: rgba($color-black, 0.65);
     margin: 0;
-    font-weight: 400;
+    font-weight: 600;
     letter-spacing: 0.05em;
 
     @media (min-width: 768px) {
@@ -108,7 +119,7 @@ $color-bg-accent: rgba($color-red, 0.06);
 // Main Content
 .content-wrapper {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1280px;
   z-index: 2;
   flex: 1;
   display: flex;
@@ -134,13 +145,19 @@ $color-bg-accent: rgba($color-red, 0.06);
   position: relative;
   display: block;
   text-decoration: none;
-  background-color: $color-bg-card;
-  border: 1px solid $color-border-subtle;
+  background-color: rgba($color-black, 0.75);
+  border: 1px solid rgba($color-red, 0.25);
   border-radius: 20px;
   overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   opacity: 0;
   animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+  min-height: 380px;
+
+  @media (min-width: 768px) {
+    min-height: 480px;
+  }
 
   // Staggered card entry
   &:nth-child(1) { animation-delay: 0.15s; }
@@ -148,13 +165,41 @@ $color-bg-accent: rgba($color-red, 0.06);
   &:nth-child(3) { animation-delay: 0.45s; }
 
   // Hover Glow effect
+  .card-bg-image-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+
+    .card-bg-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.38;
+      transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.8s ease;
+    }
+
+    .card-bg-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(180deg, rgba($color-red, 0.1) 0%, rgba($color-black, 0.82) 85%);
+      transition: background 0.5s ease;
+    }
+  }
+
   .card-glow {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: radial-gradient(800px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba($color-red, 0.04), transparent 40%);
+    background: radial-gradient(800px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba($color-red, 0.08), transparent 40%);
     opacity: 0;
     transition: opacity 0.5s ease;
     z-index: 1;
@@ -172,13 +217,13 @@ $color-bg-accent: rgba($color-red, 0.06);
   .icon-container {
     width: 56px;
     height: 56px;
-    background-color: $color-bg-card;
-    border: 1px solid $color-border-subtle;
+    background-color: rgba($color-red, 0.1);
+    border: 1px solid rgba($color-red, 0.35);
     border-radius: 14px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: rgba($color-white, 0.8);
+    color: $color-red;
     margin-bottom: 2rem;
     transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 
@@ -213,7 +258,7 @@ $color-bg-accent: rgba($color-red, 0.06);
     gap: 0.5rem;
     font-size: 0.9rem;
     font-weight: 600;
-    color: $color-text-muted;
+    color: $color-red;
     transition: all 0.3s ease;
 
     .arrow-icon {
@@ -227,30 +272,35 @@ $color-bg-accent: rgba($color-red, 0.06);
   // Hover State
   &:hover {
     transform: translateY(-8px);
-    border-color: rgba($color-red, 0.4);
-    background-color: rgba($color-white, 0.03);
-    box-shadow: 0 15px 30px -10px rgba($color-red, 0.15);
+    border-color: $color-red;
+    background-color: rgba($color-black, 0.8);
+    box-shadow: 0 20px 40px -10px rgba($color-red, 0.3), 0 0 20px rgba($color-red, 0.1);
+
+    .card-bg-image-wrapper .card-bg-image {
+      transform: scale(1.08);
+      opacity: 0.55;
+    }
+
+    .card-bg-image-wrapper .card-bg-overlay {
+      background: linear-gradient(180deg, rgba($color-red, 0.2) 0%, rgba($color-black, 0.75) 85%);
+    }
 
     .card-glow {
       opacity: 1;
     }
 
     .icon-container {
-      background-color: $color-bg-accent;
-      border-color: rgba($color-red, 0.3);
-      color: $color-red;
+      background-color: rgba($color-red, 0.2);
+      border-color: $color-red;
+      color: $color-white;
 
       .card-icon {
         transform: scale(1.08);
       }
     }
 
-    .card-title {
-      color: $color-white;
-    }
-
     .card-action {
-      color: $color-red;
+      color: $color-white;
 
       .arrow-icon {
         transform: translateX(6px);
@@ -262,19 +312,103 @@ $color-bg-accent: rgba($color-red, 0.06);
 // Footer
 .footer-wrapper {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1280px;
   border-top: 1px solid rgba($color-white, 0.05);
-  padding: 2rem 0;
-  text-align: center;
+  padding: 3rem 0 2rem 0;
+  margin-top: 4rem;
   z-index: 2;
   animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
   animation-delay: 0.6s;
 
-  .footer-text {
-    font-size: 0.85rem;
-    color: $color-text-muted;
+  .footer-inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    text-align: left;
+    margin-bottom: 3rem;
+
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .footer-heading {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: $color-white;
+    margin-bottom: 1.2rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      width: 24px;
+      height: 2px;
+      background-color: $color-red;
+    }
+  }
+
+  .footer-address {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: $color-text-secondary;
+  }
+
+  .footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .footer-detail {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: $color-text-secondary;
     margin: 0;
-    letter-spacing: 0.02em;
+
+    .footer-label {
+      font-weight: 600;
+      color: rgba($color-white, 0.9);
+      margin-right: 0.35rem;
+    }
+  }
+
+  .footer-bottom {
+    border-top: 1px solid rgba($color-white, 0.03);
+    padding-top: 1.5rem;
+    text-align: center;
+
+    .footer-logo-wrapper {
+      margin-bottom: 1.2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .footer-logo {
+        height: 38px;
+        width: auto;
+        object-fit: contain;
+        opacity: 0.85;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+
+        &:hover {
+          opacity: 1;
+          transform: scale(1.03);
+        }
+      }
+    }
+
+    .footer-copy {
+      font-size: 0.8rem;
+      color: $color-text-muted;
+      margin: 0;
+      letter-spacing: 0.02em;
+    }
   }
 }
 

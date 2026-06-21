@@ -29,6 +29,21 @@
               {
                 "glob": "**/*",
                 "input": "public"
+              },
+              {
+                "glob": "**/*",
+                "input": "../bravionprinters",
+                "output": "/bravionprinters"
+              },
+              {
+                "glob": "**/*",
+                "input": "../bravionmotors",
+                "output": "/bravionmotors"
+              },
+              {
+                "glob": "**/*",
+                "input": "../braviontechnologies",
+                "output": "/braviontechnologies"
               }
             ],
             "styles": [
@@ -88,6 +103,21 @@
               {
                 "glob": "**/*",
                 "input": "public"
+              },
+              {
+                "glob": "**/*",
+                "input": "../bravionprinters",
+                "output": "/bravionprinters"
+              },
+              {
+                "glob": "**/*",
+                "input": "../bravionmotors",
+                "output": "/bravionmotors"
+              },
+              {
+                "glob": "**/*",
+                "input": "../braviontechnologies",
+                "output": "/braviontechnologies"
               }
             ],
             "styles": [

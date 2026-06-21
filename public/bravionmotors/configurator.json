@@ -1,0 +1,64 @@
+{
+  "models": [
+    {
+      "id": "STI",
+      "name": "Subaru WRX STI",
+      "basePrice": 3900000,
+      "glb": "https://raw.githubusercontent.com/Omid2831/threejs-3d-car-viewer/main/public/models/car.glb",
+      "img": "https://images.unsplash.com/photo-1636074641063-1c2152f1b31e?w=400&q=80",
+      "specs": { "engine": "2.5L Turbo Boxer", "power": "305 hp", "drive": "Sym. AWD", "year": "2018" }
+    },
+    {
+      "id": "G63",
+      "name": "Mercedes G63 AMG",
+      "basePrice": 28500000,
+      "glb": "https://raw.githubusercontent.com/Omid2831/threejs-3d-car-viewer/main/public/models/car.glb",
+      "img": "https://images.unsplash.com/photo-1648413653877-ade5eefd2f1b?w=400&q=80",
+      "specs": { "engine": "4.0L V8 Biturbo", "power": "585 hp", "drive": "4MATIC AWD", "year": "2024" }
+    },
+    {
+      "id": "EVO",
+      "name": "Mitsubishi Evo X",
+      "basePrice": 4200000,
+      "glb": "https://raw.githubusercontent.com/Omid2831/threejs-3d-car-viewer/main/public/models/car.glb",
+      "img": "https://images.unsplash.com/photo-1660209336030-ea4d2d0e0412?w=400&q=80",
+      "specs": { "engine": "2.0L Turbo MIVEC", "power": "291 hp", "drive": "Super-AYC AWD", "year": "2015" }
+    },
+    {
+      "id": "M3",
+      "name": "BMW M3 Sedan",
+      "basePrice": 8700000,
+      "glb": "https://raw.githubusercontent.com/Omid2831/threejs-3d-car-viewer/main/public/models/car.glb",
+      "img": "https://images.unsplash.com/photo-1615644190630-c6c6f230a6ed?w=400&q=80",
+      "specs": { "engine": "3.0L I6 Biturbo", "power": "503 hp", "drive": "M xDrive", "year": "2022" }
+    },
+    {
+      "id": "GTR",
+      "name": "Nissan GT-R R35",
+      "basePrice": 14500000,
+      "glb": "https://raw.githubusercontent.com/Omid2831/threejs-3d-car-viewer/main/public/models/car.glb",
+      "img": "https://images.unsplash.com/photo-1618782657774-e5d6625a980f?w=400&q=80",
+      "specs": { "engine": "3.8L V6 Twin-Turbo", "power": "570 hp", "drive": "ATTESA AWD", "year": "2020" }
+    }
+  ],
+  "paints": [
+    { "id": "stock",  "name": "Stock Finish",   "hex": null,      "price": 0 },
+    { "id": "blk",    "name": "Void Black",      "hex": "#0d0d0d", "price": 120000 },
+    { "id": "wht",    "name": "Arctic White",    "hex": "#e8e8e8", "price": 150000 },
+    { "id": "red",    "name": "Plasma Red",      "hex": "#cc1500", "price": 200000 },
+    { "id": "blue",   "name": "Quantum Blue",    "hex": "#0055cc", "price": 220000 },
+    { "id": "ylw",    "name": "Acid Yellow",     "hex": "#d4b800", "price": 250000 },
+    { "id": "grn",    "name": "Neon Green",      "hex": "#00aa44", "price": 270000 },
+    { "id": "prp",    "name": "Deep Purple",     "hex": "#7700cc", "price": 300000 }
+  ],
+  "rims": [
+    { "id": "stock",  "name": "Stock Alloy",           "price": 0,      "img": "https://images.unsplash.com/photo-1611245089332-9df7be12d09f?w=300" },
+    { "id": "forged", "name": "Forged Bronze",         "price": 350000, "img": "https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=300" },
+    { "id": "carbon", "name": "Carbon Aero Disc",      "price": 500000, "img": "https://images.unsplash.com/photo-1578844251758-2f71da64c96f?w=300" }
+  ],
+  "options": [
+    { "id": "tint",    "name": "Ceramic Window Tint",       "price": 80000,  "desc": "99% IR heat rejection." },
+    { "id": "kit",     "name": "Carbon Fiber Body Kit",     "price": 650000, "desc": "Splitter, skirts, diffuser." },
+    { "id": "exhaust", "name": "Active Performance Exhaust","price": 400000, "desc": "Valvetronic valve system." }
+  ]
+}

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="32" height="32">
+  <!-- Rounded Black Background -->
+  <rect width="100" height="100" rx="20" fill="#0a0a0a" />
+  
+  <!-- Red B Brand Icon -->
+  <g transform="translate(7, 5) scale(0.86)">
+    <mask id="b-cutout-fav">
+      <!-- Keep white areas -->
+      <rect x="0" y="0" width="100" height="100" fill="#ffffff" />
+      <!-- Bottom counter hole slanted cutout -->
+      <path d="M30,68 L52,46 V78 H30 Z" fill="#000000" />
+      <!-- Slanted slash cutout -->
+      <polygon points="-10,72 62,0 76,10 4,82" fill="#000000" />
+    </mask>
+    <path mask="url(#b-cutout-fav)" d="M15,10 H55 C72,10 82,20 82,33 C82,43 74,47 62,48 C76,50 86,58 86,73 C86,86 72,90 55,90 H15 Z" fill="#e50000" />
+  </g>
+</svg>
