@@ -26,7 +26,7 @@
   }
   #bravion-nav-tracker {
     position: fixed;
-    bottom: 20px;
+    top: 20px;
     right: 20px;
     z-index: 100000;
     display: flex;
@@ -46,7 +46,7 @@
     transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     opacity: 0;
     pointer-events: none;
-    transform: translateY(10px);
+    transform: translateY(-10px);
   }
   #bravion-nav-tracker.visible {
     opacity: 1;
@@ -56,6 +56,24 @@
   #bravion-nav-tracker:hover {
     border-color: rgba(230, 57, 70, 0.3);
     background: rgba(10, 10, 10, 0.95);
+  }
+  #bravion-nav-tracker .b-back-btn {
+    color: #E63946;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 1.1rem;
+    padding-right: 8px;
+    border-right: 1px solid rgba(255, 255, 255, 0.15);
+    margin-right: 4px;
+    display: inline-flex;
+    align-items: center;
+    line-height: 1;
+    cursor: pointer;
+    transition: transform 0.2s ease, color 0.2s ease;
+  }
+  #bravion-nav-tracker .b-back-btn:hover {
+    transform: translateX(-2px);
+    color: #FFFFFF;
   }
   #bravion-nav-tracker a {
     color: rgba(255, 255, 255, 0.7);
@@ -119,7 +137,7 @@
   }
   #bravion-nav-dropdown {
     position: fixed;
-    bottom: 68px;
+    top: 68px;
     right: 20px;
     z-index: 99999;
     background: rgba(10, 10, 10, 0.95);
@@ -133,7 +151,7 @@
     display: none;
     flex-direction: column;
     opacity: 0;
-    transform: translateY(10px);
+    transform: translateY(-10px);
     transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   }
   #bravion-nav-dropdown.open {
@@ -169,7 +187,7 @@
   }
   @media (max-width: 580px) {
     #bravion-nav-tracker {
-      bottom: 15px;
+      top: 15px;
       right: 15px;
       padding: 5px 10px;
       font-size: 0.78rem;
@@ -180,7 +198,7 @@
       display: none !important;
     }
     #bravion-nav-dropdown {
-      bottom: 60px;
+      top: 55px;
       right: 15px;
       width: calc(100vw - 30px);
       max-width: 250px;
@@ -226,6 +244,9 @@
     function renderBreadcrumbs() {
       const parts = parsePath();
       let html = '';
+      
+      // Add Back Button
+      html += `<a href="javascript:void(0)" onclick="window.history.back()" class="b-back-btn" title="Go Back">←</a>`;
       
       html += `<span class="portal-logo-dot"></span>`;
       html += `<a href="/" class="b-link b-root">Bravion Group</a>`;
