@@ -1,0 +1,56 @@
+[
+  {
+    "id": "srv-cctv",
+    "name": "CCTV Surveillance Systems",
+    "category": "Security Systems",
+    "scope": "Site assessment, camera placement logic, cabling (Cat6/Coaxial), NVR/DVR installation, power supply distribution, and remote network access configuration.",
+    "image": "https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=600&auto=format&fit=crop&q=60",
+    "turnaround": {
+      "assessment": "Same-Day",
+      "proposal": "Next-Day",
+      "installation": "2-3 Business Days"
+    },
+    "features": [
+      "IP and Analog camera deployment",
+      "Thermal & Night-Vision configuration",
+      "Motion detection & notification zoning",
+      "Secure central server storage setup"
+    ]
+  },
+  {
+    "id": "srv-office",
+    "name": "Office Machine Services",
+    "category": "Hardware & Software Support",
+    "scope": "Installation, troubleshooting, and component replacement for multi-function printers, scanners, laminators, and shredders. Split into Hardware repairs and Software/Network integration.",
+    "image": "https://images.unsplash.com/photo-1603796846097-bee99e4a60c9?w=600&auto=format&fit=crop&q=60",
+    "turnaround": {
+      "software-jams": "Same-Day",
+      "preventative-maintenance": "Scheduled Monthly",
+      "parts-replacement": "Next-Day"
+    },
+    "features": [
+      "Paper path cleaning & roller swaps",
+      "Firmware updates & network scanning setup",
+      "Diagnostic checks & hardware troubleshooting",
+      "Toner/ink level automated alerts configuration"
+    ]
+  },
+  {
+    "id": "srv-procurement",
+    "name": "Procurement & Supply",
+    "category": "Corporate & Government Tenders",
+    "scope": "Volume sourcing of office machines, custom hardware specs, SLA contract negotiation, and group-wide consumable fulfillment schedules.",
+    "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&auto=format&fit=crop&q=60",
+    "status": "pending-approval",
+    "turnaround": {
+      "tender-review": "2 Business Days",
+      "sla-activation": "5 Business Days"
+    },
+    "features": [
+      "Bravion Printers group capacity sourcing",
+      "Compliance audit documentation",
+      "Direct manufacturer warranty channels",
+      "Dedicated account managers"
+    ]
+  }
+]

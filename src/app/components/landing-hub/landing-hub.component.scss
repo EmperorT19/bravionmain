@@ -62,13 +62,17 @@ $color-bg-accent: rgba($color-red, 0.06);
   animation: fadeIn 0.8s ease both;
 
   .top-left-logo {
-    height: 48px;
+    height: 96px;
     width: auto;
     object-fit: contain;
     transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 
     &:hover {
       transform: scale(1.04);
+    }
+
+    @media (max-width: 768px) {
+      height: 64px;
     }
   }
 
@@ -93,7 +97,7 @@ $color-bg-accent: rgba($color-red, 0.06);
 
   .hub-title {
     font-size: 2.5rem;
-    font-weight: 800;
+    font-weight: normal;
     letter-spacing: -0.02em;
     margin: 0 0 0.5rem 0;
     color: $color-black;
@@ -107,7 +111,7 @@ $color-bg-accent: rgba($color-red, 0.06);
     font-size: 1rem;
     color: rgba($color-black, 0.65);
     margin: 0;
-    font-weight: 600;
+    font-weight: normal;
     letter-spacing: 0.05em;
 
     @media (min-width: 768px) {
@@ -236,7 +240,7 @@ $color-bg-accent: rgba($color-red, 0.06);
 
   .card-title {
     font-size: 1.5rem;
-    font-weight: 700;
+    font-weight: normal;
     margin: 0 0 0.75rem 0;
     color: $color-white;
     letter-spacing: -0.01em;
@@ -257,7 +261,7 @@ $color-bg-accent: rgba($color-red, 0.06);
     align-items: center;
     gap: 0.5rem;
     font-size: 0.9rem;
-    font-weight: 600;
+    font-weight: normal;
     color: $color-red;
     transition: all 0.3s ease;
 
@@ -334,7 +338,7 @@ $color-bg-accent: rgba($color-red, 0.06);
 
   .footer-heading {
     font-size: 1.1rem;
-    font-weight: 700;
+    font-weight: normal;
     color: $color-white;
     margin-bottom: 1.2rem;
     letter-spacing: 0.05em;
@@ -372,7 +376,7 @@ $color-bg-accent: rgba($color-red, 0.06);
     margin: 0;
 
     .footer-label {
-      font-weight: 600;
+      font-weight: normal;
       color: rgba($color-white, 0.9);
       margin-right: 0.35rem;
     }
@@ -390,7 +394,7 @@ $color-bg-accent: rgba($color-red, 0.06);
       align-items: center;
 
       .footer-logo {
-        height: 38px;
+        height: 76px;
         width: auto;
         object-fit: contain;
         opacity: 0.85;
@@ -399,6 +403,10 @@ $color-bg-accent: rgba($color-red, 0.06);
         &:hover {
           opacity: 1;
           transform: scale(1.03);
+        }
+
+        @media (max-width: 768px) {
+          height: 56px;
         }
       }
     }
@@ -449,7 +457,7 @@ $color-bg-accent: rgba($color-red, 0.06);
 
   .overlay-status {
     font-size: 0.75rem;
-    font-weight: 700;
+    font-weight: normal;
     letter-spacing: 0.25em;
     color: $color-red;
     margin: 0 0 0.5rem 0;
@@ -457,7 +465,7 @@ $color-bg-accent: rgba($color-red, 0.06);
 
   .overlay-title {
     font-size: 1.75rem;
-    font-weight: 800;
+    font-weight: normal;
     margin: 0 0 2rem 0;
     color: $color-white;
   }

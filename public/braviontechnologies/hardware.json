@@ -1,0 +1,242 @@
+[
+  {
+    "id": "eq-printers-general",
+    "name": "Printers & Multi-Function Devices",
+    "category": "Office Equipment",
+    "subcategory": "Printers",
+    "image": "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?w=600&auto=format&fit=crop&q=60",
+    "price": "Request Quote / Tender",
+    "stockStatus": "In Stock",
+    "specs": {
+      "Offered Models": "Multi-function laser printers, A3 department copiers, wide-format plotters",
+      "Brands Supplied": "HP LaserJet Pro, Canon imageCLASS, Epson EcoTank",
+      "Capabilities": "High-volume print/scan/copy, cloud print routing, duplex printing, security encryption",
+      "Support & SLAs": "Free installation, 3-year warranty options, monthly SLA sweep agreements"
+    }
+  },
+  {
+    "id": "eq-power-general",
+    "name": "Power Backup & Protection Systems",
+    "category": "Power & Backup Systems",
+    "subcategory": "Solar & UPS",
+    "image": "https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?w=600&auto=format&fit=crop&q=60",
+    "price": "Request Quote",
+    "stockStatus": "In Stock",
+    "specs": {
+      "Solar Backups": "Off-grid MPPT Solar station backups for core network closets & server rooms",
+      "Inverters & UPS": "Pure sine wave rack-mount inverters (1kVA - 5kVA), online double-conversion UPS",
+      "Gear Protected": "Core routers, switches, network video recorders (NVRs), enterprise servers",
+      "Battery Runtime": "High-cycle LiFePO4 batteries, automated shutdown control software integration"
+    }
+  },
+  {
+    "id": "eq-network-general",
+    "name": "Networking & Telecom Infrastructure",
+    "category": "Networking Equipment",
+    "subcategory": "Active Network Gear",
+    "image": "https://images.unsplash.com/photo-1597852074816-d933c7d2b988?w=600&auto=format&fit=crop&q=60",
+    "price": "Request Quote",
+    "stockStatus": "In Stock",
+    "specs": {
+      "Core Routing": "Enterprise SFP+ core routers, multi-WAN load balancing gear",
+      "Active Switches": "PoE+ Managed Layer-2/Layer-3 switches (24-port, 48-port options)",
+      "Wireless Access": "Enterprise Tri-band Wi-Fi 6E/7 Access Points with central controller",
+      "Cabling & Racks": "Cat6A/Fiber optic backbones, server rack cabinets, patch panels"
+    }
+  },
+  {
+    "id": "eq-finishing-general",
+    "name": "Document Finishing & Office Machines",
+    "category": "Office Equipment",
+    "subcategory": "Finishing Equipment",
+    "image": "https://images.unsplash.com/photo-1595225476474-87563907a212?w=600&auto=format&fit=crop&q=60",
+    "price": "Request Quote / Tender",
+    "stockStatus": "In Stock",
+    "specs": {
+      "Laminating Gear": "Heavy-duty hot & cold A3 pouch laminating machines for bulk documentation",
+      "Secure Shredders": "Cross-cut and micro-cut high-security document shredders (DIN P-4 / P-5)",
+      "Binding Machines": "Manual and electric plastic comb binding and wire binding stations",
+      "Paper Trimmers": "Precision guillotine and rotary paper trimmers for bulk document preparation"
+    }
+  },
+  {
+    "id": "eq-pos-general",
+    "name": "Barcode, POS & Scanning Systems",
+    "category": "Scanning & POS Hardware",
+    "subcategory": "POS Equipment",
+    "image": "https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=600&auto=format&fit=crop&q=60",
+    "price": "Request Quote",
+    "stockStatus": "In Stock",
+    "specs": {
+      "Label Printers": "Thermal transfer industrial barcode printers, desktop shipping label printers",
+      "Barcode Scanners": "Rugged handheld 1D/2D wireless Bluetooth scanners, presentation scanners",
+      "POS Hardware": "Thermal receipt printers, electronic cash drawers, customer pole displays",
+      "Consumables": "Thermal paper rolls, adhesive barcode labels, resin ribbons"
+    }
+  },
+  {
+    "id": "eq-consumables-general",
+    "name": "Inks, Toners & Printer Consumables",
+    "category": "Toners & Cartridges",
+    "subcategory": "Printing Consumables",
+    "image": "https://images.unsplash.com/photo-1626607315372-9111c1d0637f?w=600&auto=format&fit=crop&q=60",
+    "price": "Request Quote",
+    "stockStatus": "In Stock",
+    "specs": {
+      "Toner Cartridges": "High-yield replacement toner cartridges for LaserJet printers (e.g. CF259A, Canon CRG-057)",
+      "Ink Systems": "Bulk bottle ink sets for Epson EcoTank and Canon MegaTank inkjets",
+      "Media & Paper": "Wide-format plotter paper rolls (A0, A1), premium office paper copy boxes",
+      "Dot-Matrix Ribbons": "Replacement ribbon cartridges for Epson LQ-310 and high-impact line printers"
+    }
+  },
+  {
+    "id": "eq-server-general",
+    "name": "Enterprise Servers & NAS Storage",
+    "category": "Server & Storage Systems",
+    "subcategory": "Servers & Storage",
+    "image": "https://images.unsplash.com/photo-1600132806370-bf17e65e942f?w=600&auto=format&fit=crop&q=60",
+    "price": "Request Quote / Tender",
+    "stockStatus": "In Stock",
+    "specs": {
+      "Rack Servers": "1U, 2U, and 4U rackmount servers (Intel Xeon / AMD EPYC configurations)",
+      "NAS/SAN Storage": "High-capacity network attached storage (NAS) and storage area network (SAN) arrays",
+      "Backup Media": "LTO tape drives, enterprise hot-swap SAS/SATA drives, secure offsite backup boxes",
+      "Virtualization": "Proxmox VE, VMware ESXi, and Hyper-V host system configurations"
+    }
+  },
+  {
+    "id": "eq-security-general",
+    "name": "CCTV Cameras, NVRs & Security Locks",
+    "category": "CCTV & Security Hardware",
+    "subcategory": "Security Devices",
+    "image": "https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=600&auto=format&fit=crop&q=60",
+    "price": "Request Quote",
+    "stockStatus": "In Stock",
+    "specs": {
+      "IP Cameras": "4K Ultra-HD bullet, dome, turret, and PTZ optical zoom network cameras",
+      "Recording Units": "8-channel to 64-channel Network Video Recorders (NVR) with AI analytics",
+      "Access Terminals": "Biometric fingerprint and facial recognition scanners, RFID wall readers",
+      "Lock Systems": "Magnetic locks (EM locks), drop bolts, hotel RF card locks, door closers"
+    }
+  },
+  {
+    "id": "eq-av-general",
+    "name": "Smart Boards, Projectors & Conference AV",
+    "category": "Audio-Visual & Conference Systems",
+    "subcategory": "Conference Systems",
+    "image": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&auto=format&fit=crop&q=60",
+    "price": "Request Quote",
+    "stockStatus": "In Stock",
+    "specs": {
+      "Smart Displays": "Interactive touchscreen flat panels (Smart Boards) for training & boardrooms",
+      "Projectors": "High-lumens laser projectors, motorized projection screens",
+      "Audio Systems": "Conference speakerphones, soundbars, wireless collar and handheld mics",
+      "Room Integration": "HDMI matrix switchers, wireless presentation hubs (e.g., ClickShare)"
+    }
+  },
+  {
+    "id": "eq-telecom-general",
+    "name": "VoIP IP-PBX & Phone Terminals",
+    "category": "Telecommunications & VoIP",
+    "subcategory": "VoIP Gear",
+    "image": "https://images.unsplash.com/photo-1583508915901-b5f84c1dcde1?w=600&auto=format&fit=crop&q=60",
+    "price": "Request Quote",
+    "stockStatus": "In Stock",
+    "specs": {
+      "IP PBX Servers": "On-premise IP-PBX appliances, support for SIP trunks and remote extensions",
+      "IP Desk Phones": "Gigabit executive color-screen desk phones, receptionist expansion consoles",
+      "Wireless IP": "DECT cordless IP phones, Wi-Fi SIP handsets for mobile office staff",
+      "Softphone Sync": "System integrations with desktop and mobile softphone apps"
+    }
+  },
+  {
+    "id": "eq-cabling-general",
+    "name": "Network Cabling, Patch Panels & Trays",
+    "category": "Cabling & Infrastructure",
+    "subcategory": "Structural Cabling",
+    "image": "https://images.unsplash.com/photo-1593305841991-05c297ba4575?w=600&auto=format&fit=crop&q=60",
+    "price": "Request Quote",
+    "stockStatus": "In Stock",
+    "specs": {
+      "Copper Media": "Cat6, Cat6A UTP/FTP solid copper network cables, RJ45 modules",
+      "Fiber Optics": "Single-mode and multi-mode fiber patch cables, pigtails, splice trays",
+      "Patch Panels": "24-port and 48-port loaded and unloaded keystone patch panels",
+      "Trunking & Trays": "PVC trunking profiles, metallic wire mesh cable trays, cable ties"
+    }
+  },
+  {
+    "id": "eq-cybersecurity-general",
+    "name": "Firewall & Cyber-Security Hardware",
+    "category": "Cybersecurity Hardware",
+    "subcategory": "Cybersecurity Systems",
+    "image": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=600&auto=format&fit=crop&q=60",
+    "price": "Request Quote / Tender",
+    "stockStatus": "In Stock",
+    "specs": {
+      "Hardware Firewalls": "Unified Threat Management (UTM) firewalls with real-time packet inspection",
+      "VPN Gateways": "Hardware IPSec/SSL VPN hubs for secure branch-office site connectivity",
+      "Intrusion Prevention": "Dedicated Intrusion Prevention Systems (IPS) with live signature updates",
+      "Traffic Control": "Layer-7 application filters, packet shaping bandwidth tools"
+    }
+  },
+  {
+    "id": "eq-attendance-general",
+    "name": "Biometric Time & Attendance Terminals",
+    "category": "Access Control & Biometrics",
+    "subcategory": "Biometric Devices",
+    "image": "https://images.unsplash.com/photo-1558002038-1055907df827?w=600&auto=format&fit=crop&q=60",
+    "price": "Request Quote",
+    "stockStatus": "In Stock",
+    "specs": {
+      "Access Terminals": "Dual-sensor face recognition kiosks, optical fingerprint wall consoles",
+      "Card Scanners": "Contactless Smart Card & RFID reader systems with keypads",
+      "Turnstile Hubs": "Tripod turnstiles, speed gates, controller units for building lobbies",
+      "HR Integration": "Automated logs export to payroll and workforce management systems"
+    }
+  },
+  {
+    "id": "eq-fibertest-general",
+    "name": "Fiber Optic Splice & Test Gear",
+    "category": "Fiber Splicing & Testing",
+    "subcategory": "Fiber Tools",
+    "image": "https://images.unsplash.com/photo-1593305841991-05c297ba4575?w=600&auto=format&fit=crop&q=60",
+    "price": "Request Quote",
+    "stockStatus": "In Stock",
+    "specs": {
+      "Fusion Splicers": "High-precision core-alignment optical fiber fusion splicing stations",
+      "OTDR Testers": "Optical Time Domain Reflectometers with touchscreen trace visualization",
+      "Power Meters": "Laser light sources, optical power meters, visual fault locators (VFL)",
+      "Preparation Tools": "Fiber cleavers, thermal strippers, cleaning cassettes & alcohol pumps"
+    }
+  },
+  {
+    "id": "eq-queue-general",
+    "name": "Queue Management Kiosks & Screens",
+    "category": "Queue Management Hardware",
+    "subcategory": "Queue Systems",
+    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&auto=format&fit=crop&q=60",
+    "price": "Request Quote / Tender",
+    "stockStatus": "In Stock",
+    "specs": {
+      "Ticket Kiosks": "Floor-standing interactive touchscreen thermal ticket dispensers",
+      "LED Displays": "Segmented counter LED indicators, main lobby media displays",
+      "Call Consoles": "Physical keypad teller consoles, software terminal calls",
+      "Feedback Systems": "Customer satisfaction tablets, feedback logs collector software"
+    }
+  },
+  {
+    "id": "eq-iotbuilding-general",
+    "name": "Smart Building & IoT Controllers",
+    "category": "IoT & Smart Building Hardware",
+    "subcategory": "Smart Building",
+    "image": "https://images.unsplash.com/photo-1558002038-1055907df827?w=600&auto=format&fit=crop&q=60",
+    "price": "Request Quote",
+    "stockStatus": "In Stock",
+    "specs": {
+      "Sensor Nodes": "Environmental temperature, humidity, water leak, and smoke IoT sensors",
+      "Control Hubs": "PoE-powered automation controllers, smart wall-mounted touch keypads",
+      "Asset Tracking": "BLE tags, active RFID tracking gates, software inventory dashboard",
+      "Management Desk": "Local facility dashboard integrations, Modbus/BACnet gateway modules"
+    }
+  }
+]

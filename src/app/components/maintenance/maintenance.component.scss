@@ -135,7 +135,7 @@ $color-bg-accent: rgba($color-red, 0.1);
 
   .status-text {
     font-size: 0.75rem;
-    font-weight: 700;
+    font-weight: normal;
     letter-spacing: 0.2em;
     color: $color-red;
   }
@@ -144,7 +144,7 @@ $color-bg-accent: rgba($color-red, 0.1);
 // Typography
 .title {
   font-size: 2.25rem;
-  font-weight: 800;
+  font-weight: normal;
   margin: 0 0 1.2rem 0;
   letter-spacing: -0.03em;
   line-height: 1.25;
@@ -212,7 +212,7 @@ $color-bg-accent: rgba($color-red, 0.1);
 
 .footer-title {
   font-size: 0.8rem;
-  font-weight: 800;
+  font-weight: normal;
   letter-spacing: 0.25em;
   color: $color-text-muted;
   margin: 0 0 2.5rem 0;
@@ -306,7 +306,7 @@ $color-bg-accent: rgba($color-red, 0.1);
   font-size: 0.95rem;
   line-height: 1.5;
   color: rgba($color-white, 0.85);
-  font-weight: 500;
+  font-weight: normal;
   word-break: break-word;
 
   br {
