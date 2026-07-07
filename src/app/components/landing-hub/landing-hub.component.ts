@@ -12,10 +12,10 @@ export class LandingHubComponent implements OnInit {
   processedFooterLogoUrl = 'bravion group black.jpeg';
 
   ngOnInit(): void {
-    this.processLogo('bravion group white.jpeg', false, (url) => {
+    this.processLogo('bravion group white.jpeg?v=2', false, (url) => {
       this.processedTopLogoUrl = url;
     });
-    this.processLogo('bravion group black.jpeg', true, (url) => {
+    this.processLogo('bravion group black.jpeg?v=2', true, (url) => {
       this.processedFooterLogoUrl = url;
     });
   }

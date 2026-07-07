@@ -135,18 +135,18 @@
     }
   },
   {
-    "id": "eq-telecom-general",
-    "name": "VoIP IP-PBX & Phone Terminals",
-    "category": "Telecommunications & VoIP",
-    "subcategory": "VoIP Gear",
-    "image": "https://images.unsplash.com/photo-1583508915901-b5f84c1dcde1?w=600&auto=format&fit=crop&q=60",
-    "price": "Request Quote",
+    "id": "eq-laptops-general",
+    "name": "Corporate Laptops & Workstations",
+    "category": "Laptops & Workstations",
+    "subcategory": "Enterprise Computing",
+    "image": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=600&auto=format&fit=crop&q=60",
+    "price": "Request Quote / Tender",
     "stockStatus": "In Stock",
     "specs": {
-      "IP PBX Servers": "On-premise IP-PBX appliances, support for SIP trunks and remote extensions",
-      "IP Desk Phones": "Gigabit executive color-screen desk phones, receptionist expansion consoles",
-      "Wireless IP": "DECT cordless IP phones, Wi-Fi SIP handsets for mobile office staff",
-      "Softphone Sync": "System integrations with desktop and mobile softphone apps"
+      "Corporate Laptops": "High-performance enterprise laptops, ultrabooks, and rugged field devices",
+      "Desktop Stations": "Small Form Factor (SFF) corporate PCs, all-in-one workstations, and dual-monitor bundles",
+      "Brands Offered": "Lenovo ThinkPad, HP EliteBook, Dell Latitude with security encryption",
+      "SLA Configuration": "Pre-configured corporate OS images, domain-joining setup, and swap-out support warranties"
     }
   },
   {
@@ -184,7 +184,7 @@
     "name": "Biometric Time & Attendance Terminals",
     "category": "Access Control & Biometrics",
     "subcategory": "Biometric Devices",
-    "image": "https://images.unsplash.com/photo-1558002038-1055907df827?w=600&auto=format&fit=crop&q=60",
+    "image": "https://images.unsplash.com/photo-1509062522246-3755977927d7?w=600&auto=format&fit=crop&q=60",
     "price": "Request Quote",
     "stockStatus": "In Stock",
     "specs": {
@@ -199,7 +199,7 @@
     "name": "Fiber Optic Splice & Test Gear",
     "category": "Fiber Splicing & Testing",
     "subcategory": "Fiber Tools",
-    "image": "https://images.unsplash.com/photo-1593305841991-05c297ba4575?w=600&auto=format&fit=crop&q=60",
+    "image": "https://images.unsplash.com/photo-1601524909162-be87252be298?w=600&auto=format&fit=crop&q=60",
     "price": "Request Quote",
     "stockStatus": "In Stock",
     "specs": {
@@ -229,7 +229,7 @@
     "name": "Smart Building & IoT Controllers",
     "category": "IoT & Smart Building Hardware",
     "subcategory": "Smart Building",
-    "image": "https://images.unsplash.com/photo-1558002038-1055907df827?w=600&auto=format&fit=crop&q=60",
+    "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&auto=format&fit=crop&q=60",
     "price": "Request Quote",
     "stockStatus": "In Stock",
     "specs": {

@@ -15,7 +15,7 @@ export class MaintenanceComponent implements OnInit {
 
   processLogo(): void {
     const img = new Image();
-    img.src = 'bravion group black.jpeg';
+    img.src = 'bravion group black.jpeg?v=2';
     img.onload = () => {
       const canvas = document.createElement('canvas');
       canvas.width = img.width;
