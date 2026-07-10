@@ -62,7 +62,7 @@ $color-bg-accent: rgba($color-red, 0.06);
   animation: fadeIn 0.8s ease both;
 
   .top-left-logo {
-    height: 96px;
+    height: 144px;
     width: auto;
     object-fit: contain;
     transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
@@ -72,7 +72,7 @@ $color-bg-accent: rgba($color-red, 0.06);
     }
 
     @media (max-width: 768px) {
-      height: 64px;
+      height: 96px;
     }
   }
 
@@ -96,14 +96,14 @@ $color-bg-accent: rgba($color-red, 0.06);
   animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
 
   .hub-title {
-    font-size: 2.5rem;
+    font-size: 1.25rem;
     font-weight: normal;
     letter-spacing: -0.02em;
     margin: 0 0 0.5rem 0;
     color: $color-black;
 
     @media (min-width: 768px) {
-      font-size: 3.5rem;
+      font-size: 1.75rem;
     }
   }
 
