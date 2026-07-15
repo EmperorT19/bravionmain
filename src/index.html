@@ -1,326 +1,352 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>Bravion Group</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Bravion Group - Premium branding, design, printing, automotive service, and digital technology solutions.">
+  <meta name="description"
+    content="Bravion Group - Premium branding, design, printing, automotive service, and digital technology solutions.">
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
+
 <body>
   <app-root></app-root>
-<!-- Bravion Navigation Tracker -->
-<style>
-  @font-face {
-    font-family: 'YDYoonche';
-    src: url('/YDYooncheB.ttf') format('truetype'),
-         url('YDYooncheB.ttf') format('truetype'),
-         url('../YDYooncheB.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-  }
-  #bravion-nav-tracker {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 100000;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    background: rgba(10, 10, 10, 0.82);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 6px 14px;
-    border-radius: 30px;
-    font-family: 'YDYoonche', 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    font-size: 0.82rem;
-    font-weight: 500;
-    color: rgba(255, 255, 255, 0.7);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 15px rgba(230, 57, 70, 0.15);
-    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-    opacity: 0;
-    pointer-events: none;
-    transform: translateY(-10px);
-  }
-  #bravion-nav-tracker.visible {
-    opacity: 1;
-    pointer-events: auto;
-    transform: translateY(0);
-  }
-  #bravion-nav-tracker:hover {
-    border-color: rgba(230, 57, 70, 0.3);
-    background: rgba(10, 10, 10, 0.95);
-  }
-  #bravion-nav-tracker .b-back-btn {
-    color: #E63946;
-    text-decoration: none;
-    font-weight: 800;
-    font-size: 1.1rem;
-    padding-right: 8px;
-    border-right: 1px solid rgba(255, 255, 255, 0.15);
-    margin-right: 4px;
-    display: inline-flex;
-    align-items: center;
-    line-height: 1;
-    cursor: pointer;
-    transition: transform 0.2s ease, color 0.2s ease;
-  }
-  #bravion-nav-tracker .b-back-btn:hover {
-    transform: translateX(-2px);
-    color: #FFFFFF;
-  }
-  #bravion-nav-tracker a {
-    color: rgba(255, 255, 255, 0.7);
-    text-decoration: none;
-    transition: color 0.2s ease;
-    display: inline-flex;
-    align-items: center;
-  }
-  #bravion-nav-tracker a:hover {
-    color: #E63946;
-  }
-  #bravion-nav-tracker .active-node {
-    color: #FFFFFF;
-    font-weight: 600;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 180px;
-  }
-  #bravion-nav-tracker .divider {
-    color: #E63946;
-    font-weight: 800;
-    font-size: 0.9rem;
-    user-select: none;
-    padding: 0 2px;
-  }
-  #bravion-nav-tracker .portal-logo-dot {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background-color: #E63946;
-    box-shadow: 0 0 6px #E63946;
-    display: inline-block;
-    flex-shrink: 0;
-  }
-  #bravion-nav-tracker .switcher-trigger {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    color: rgba(255, 255, 255, 0.5);
-    padding: 2px;
-    margin-left: 4px;
-    border-radius: 50%;
-    transition: all 0.2s ease;
-  }
-  #bravion-nav-tracker .switcher-trigger:hover {
-    color: #FFFFFF;
-    background: rgba(255, 255, 255, 0.05);
-  }
-  #bravion-nav-tracker .switcher-trigger svg {
-    width: 14px;
-    height: 14px;
-    transform: rotate(0);
-    transition: transform 0.2s ease;
-  }
-  #bravion-nav-tracker .switcher-trigger.open svg {
-    transform: rotate(180deg);
-  }
-  #bravion-nav-dropdown {
-    position: fixed;
-    top: 68px;
-    right: 20px;
-    z-index: 99999;
-    background: rgba(10, 10, 10, 0.95);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 16px;
-    padding: 8px;
-    width: 220px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.9);
-    display: none;
-    flex-direction: column;
-    opacity: 0;
-    transform: translateY(-10px);
-    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-  #bravion-nav-dropdown.open {
-    display: flex;
-    opacity: 1;
-    transform: translateY(0);
-  }
-  #bravion-nav-dropdown a {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 14px;
-    color: rgba(255, 255, 255, 0.8);
-    text-decoration: none;
-    border-radius: 8px;
-    font-family: inherit;
-    font-size: 0.85rem;
-    font-weight: 500;
-    transition: all 0.2s ease;
-  }
-  #bravion-nav-dropdown a:hover {
-    background: rgba(230, 57, 70, 0.08);
-    color: #FFFFFF;
-  }
-  #bravion-nav-dropdown a.active {
-    background: rgba(255, 255, 255, 0.04);
-    border-left: 2px solid #E63946;
-    color: #FFFFFF;
-    font-weight: 600;
-  }
-  #bravion-nav-dropdown .dropdown-icon {
-    font-size: 1.1rem;
-  }
-  @media (max-width: 580px) {
+  <!-- Bravion Navigation Tracker -->
+  <style>
+    @font-face {
+      font-family: 'YDYoonche';
+      src: url('/YDYooncheB.ttf') format('truetype'),
+        url('YDYooncheB.ttf') format('truetype'),
+        url('../YDYooncheB.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
+
     #bravion-nav-tracker {
-      top: 15px;
-      right: 15px;
-      padding: 5px 10px;
-      font-size: 0.78rem;
+      position: fixed;
+      top: 24px;
+      right: 24px;
+      z-index: 100000;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: rgba(10, 10, 10, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      padding: 10px 22px;
+      border-radius: 35px;
+      font-family: 'YDYoonche', 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.7);
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6), 0 0 20px rgba(230, 57, 70, 0.2);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(-10px);
     }
-    #bravion-nav-tracker .b-root,
-    #bravion-nav-tracker .b-parent,
+
+    #bravion-nav-tracker.visible {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+
+    #bravion-nav-tracker:hover {
+      border-color: rgba(230, 57, 70, 0.3);
+      background: rgba(10, 10, 10, 0.95);
+    }
+
+    #bravion-nav-tracker .b-back-btn {
+      color: #E63946;
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 1.25rem;
+      padding-right: 12px;
+      border-right: 1px solid rgba(255, 255, 255, 0.15);
+      margin-right: 6px;
+      display: inline-flex;
+      align-items: center;
+      line-height: 1;
+      cursor: pointer;
+      transition: transform 0.2s ease, color 0.2s ease;
+    }
+
+    #bravion-nav-tracker .b-back-btn:hover {
+      transform: translateX(-2px);
+      color: #FFFFFF;
+    }
+
+    #bravion-nav-tracker a {
+      color: rgba(255, 255, 255, 0.7);
+      text-decoration: none;
+      transition: color 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    #bravion-nav-tracker a:hover {
+      color: #E63946;
+    }
+
+    #bravion-nav-tracker .active-node {
+      color: #FFFFFF;
+      font-weight: 600;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 180px;
+    }
+
     #bravion-nav-tracker .divider {
-      display: none !important;
+      color: #E63946;
+      font-weight: 800;
+      font-size: 1.05rem;
+      user-select: none;
+      padding: 0 4px;
     }
+
+    #bravion-nav-tracker .portal-logo-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: #E63946;
+      box-shadow: 0 0 8px #E63946;
+      display: inline-block;
+      flex-shrink: 0;
+    }
+
+    #bravion-nav-tracker .switcher-trigger {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      color: rgba(255, 255, 255, 0.5);
+      padding: 4px;
+      margin-left: 6px;
+      border-radius: 50%;
+      transition: all 0.2s ease;
+    }
+
+    #bravion-nav-tracker .switcher-trigger:hover {
+      color: #FFFFFF;
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    #bravion-nav-tracker .switcher-trigger svg {
+      width: 16px;
+      height: 16px;
+      transform: rotate(0);
+      transition: transform 0.2s ease;
+    }
+
+    #bravion-nav-tracker .switcher-trigger.open svg {
+      transform: rotate(180deg);
+    }
+
     #bravion-nav-dropdown {
-      top: 55px;
-      right: 15px;
-      width: calc(100vw - 30px);
-      max-width: 250px;
-    }
-  }
-</style>
-
-<div id="bravion-nav-tracker"></div>
-<div id="bravion-nav-dropdown"></div>
-
-<script>
-  (function() {
-    const container = document.getElementById('bravion-nav-tracker');
-    const dropdown = document.getElementById('bravion-nav-dropdown');
-    
-    const pathNames = {
-      '': 'Home',
-      'about': 'About Us',
-      'blog': 'Blog',
-      'clients': 'Clients',
-      'contact': 'Contact',
-      'portfolio': 'Portfolio',
-      'services': 'Services',
-      'corporate-branding': 'Corporate Branding',
-      'digital-design': 'Digital Design',
-      'event-branding': 'Event Branding',
-      'office-branding': 'Office Branding',
-      'printing-stationery': 'Printing & Stationery',
-      'signage-branding': 'Signage & Branding',
-      'vehicle-branding': 'Vehicle Branding',
-      'service-detail': 'Service Details',
-      'inventory': 'Yard',
-      'yard': 'Yard',
-      'parts': 'Parts'
-    };
-
-    function parsePath() {
-      const path = window.location.pathname;
-      const parts = path.split('/').filter(p => p !== '');
-      return parts;
+      position: fixed;
+      top: 76px;
+      right: 24px;
+      z-index: 99999;
+      background: rgba(10, 10, 10, 0.95);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 16px;
+      padding: 8px;
+      width: 220px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.9);
+      display: none;
+      flex-direction: column;
+      opacity: 0;
+      transform: translateY(-10px);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
-    function renderBreadcrumbs() {
-      const parts = parsePath();
-      let html = '';
-      
-      // Add Back Button
-      html += `<a href="javascript:void(0)" onclick="window.history.back()" class="b-back-btn" title="Go Back">←</a>`;
-      
-      html += `<span class="portal-logo-dot"></span>`;
-      html += `<a href="/" class="b-link b-root">Bravion Group</a>`;
-      
-      let currentApp = '';
-      let appName = '';
-      let appHref = '';
-      
-      if (parts.length > 0) {
-        const rootPart = parts[0].toLowerCase();
-        if (rootPart.includes('printers')) {
-          currentApp = 'printers';
-          appName = 'Printers';
-          appHref = '/bravionprinters/';
-        } else if (rootPart.includes('motors')) {
-          currentApp = 'motors';
-          appName = 'Motors';
-          appHref = '/bravionmotors/';
-        } else if (rootPart.includes('technologies')) {
-          currentApp = 'technologies';
-          appName = 'Technologies';
-          appHref = '/braviontechnologies/';
-        }
+    #bravion-nav-dropdown.open {
+      display: flex;
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    #bravion-nav-dropdown a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 14px;
+      color: rgba(255, 255, 255, 0.8);
+      text-decoration: none;
+      border-radius: 8px;
+      font-family: inherit;
+      font-size: 0.85rem;
+      font-weight: 500;
+      transition: all 0.2s ease;
+    }
+
+    #bravion-nav-dropdown a:hover {
+      background: rgba(230, 57, 70, 0.08);
+      color: #FFFFFF;
+    }
+
+    #bravion-nav-dropdown a.active {
+      background: rgba(255, 255, 255, 0.04);
+      border-left: 2px solid #E63946;
+      color: #FFFFFF;
+      font-weight: 600;
+    }
+
+    #bravion-nav-dropdown .dropdown-icon {
+      font-size: 1.1rem;
+    }
+
+    @media (max-width: 580px) {
+      #bravion-nav-tracker {
+        top: 16px;
+        right: 16px;
+        padding: 8px 16px;
+        font-size: 0.85rem;
       }
-      
-      if (currentApp) {
-        html += `<span class="divider">›</span>`;
-        if (parts.length === 1 || (parts.length === 2 && parts[1] === '')) {
-          html += `<span class="active-node">${appName}</span>`;
-        } else {
-          html += `<a href="${appHref}" class="b-link b-parent">${appName}</a>`;
-        }
-        
-        for (let i = 1; i < parts.length; i++) {
-          const part = parts[i].toLowerCase();
-          if (part === '') continue;
-          
-          html += `<span class="divider">›</span>`;
-          const cleanName = pathNames[part] || part.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
-          
-          if (i === parts.length - 1) {
-            html += `<span class="active-node">${cleanName}</span>`;
-          } else {
-            const subHref = '/' + parts.slice(0, i + 1).join('/') + '/';
-            html += `<a href="${subHref}" class="b-link b-parent">${cleanName}</a>`;
+
+      #bravion-nav-tracker .b-root,
+      #bravion-nav-tracker .b-parent,
+      #bravion-nav-tracker .divider {
+        display: none !important;
+      }
+
+      #bravion-nav-dropdown {
+        top: 55px;
+        right: 15px;
+        width: calc(100vw - 30px);
+        max-width: 250px;
+      }
+    }
+  </style>
+
+  <div id="bravion-nav-tracker"></div>
+  <div id="bravion-nav-dropdown"></div>
+
+  <script>
+    (function () {
+      const container = document.getElementById('bravion-nav-tracker');
+      const dropdown = document.getElementById('bravion-nav-dropdown');
+
+      const pathNames = {
+        '': 'Home',
+        'about': 'About Us',
+        'blog': 'Blog',
+        'clients': 'Clients',
+        'contact': 'Contact',
+        'portfolio': 'Portfolio',
+        'services': 'Services',
+        'corporate-branding': 'Corporate Branding',
+        'digital-design': 'Digital Design',
+        'event-branding': 'Event Branding',
+        'office-branding': 'Office Branding',
+        'printing-stationery': 'Printing & Stationery',
+        'signage-branding': 'Signage & Branding',
+        'vehicle-branding': 'Vehicle Branding',
+        'service-detail': 'Service Details',
+        'inventory': 'Yard',
+        'yard': 'Yard',
+        'parts': 'Parts'
+      };
+
+      function parsePath() {
+        const path = window.location.pathname;
+        const parts = path.split('/').filter(p => p !== '');
+        return parts;
+      }
+
+      function renderBreadcrumbs() {
+        const parts = parsePath();
+        let html = '';
+
+        // Add Back Button
+        html += `<a href="javascript:void(0)" onclick="window.history.back()" class="b-back-btn" title="Go Back">←</a>`;
+
+        html += `<span class="portal-logo-dot"></span>`;
+        html += `<a href="/" class="b-link b-root">Back to Bravion Group</a>`;
+
+        let currentApp = '';
+        let appName = '';
+        let appHref = '';
+
+        if (parts.length > 0) {
+          const rootPart = parts[0].toLowerCase();
+          if (rootPart.includes('printers')) {
+            currentApp = 'printers';
+            appName = 'Printers';
+            appHref = '/bravionprinters/';
+          } else if (rootPart.includes('motors')) {
+            currentApp = 'motors';
+            appName = 'Motors';
+            appHref = '/bravionmotors/';
+          } else if (rootPart.includes('technologies')) {
+            currentApp = 'technologies';
+            appName = 'Technologies';
+            appHref = '/braviontechnologies/';
           }
         }
-      }
-      
-      html += `
+
+        if (currentApp) {
+          html += `<span class="divider">›</span>`;
+          if (parts.length === 1 || (parts.length === 2 && parts[1] === '')) {
+            html += `<span class="active-node">${appName}</span>`;
+          } else {
+            html += `<a href="${appHref}" class="b-link b-parent">${appName}</a>`;
+          }
+
+          for (let i = 1; i < parts.length; i++) {
+            const part = parts[i].toLowerCase();
+            if (part === '') continue;
+
+            html += `<span class="divider">›</span>`;
+            const cleanName = pathNames[part] || part.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+
+            if (i === parts.length - 1) {
+              html += `<span class="active-node">${cleanName}</span>`;
+            } else {
+              const subHref = '/' + parts.slice(0, i + 1).join('/') + '/';
+              html += `<a href="${subHref}" class="b-link b-parent">${cleanName}</a>`;
+            }
+          }
+        }
+
+        html += `
         <button class="switcher-trigger" id="bravion-switcher-btn" aria-label="Switch Divisions">
           <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
             <polyline points="6 9 12 15 18 9"></polyline>
           </svg>
         </button>
       `;
-      
-      container.innerHTML = html;
-      
-      const switcherBtn = document.getElementById('bravion-switcher-btn');
-      if (switcherBtn) {
-        switcherBtn.addEventListener('click', function(e) {
-          e.stopPropagation();
-          this.classList.toggle('open');
-          dropdown.classList.toggle('open');
-        });
-      }
-      
-      renderDropdown(currentApp);
-      container.classList.add('visible');
-    }
 
-    function renderDropdown(currentApp) {
-      dropdown.innerHTML = `
+        container.innerHTML = html;
+
+        const switcherBtn = document.getElementById('bravion-switcher-btn');
+        if (switcherBtn) {
+          switcherBtn.addEventListener('click', function (e) {
+            e.stopPropagation();
+            this.classList.toggle('open');
+            dropdown.classList.toggle('open');
+          });
+        }
+
+        renderDropdown(currentApp);
+        container.classList.add('visible');
+      }
+
+      function renderDropdown(currentApp) {
+        dropdown.innerHTML = `
         <a href="/" class="${!currentApp ? 'active' : ''}">
           <span>Bravion Group Hub</span>
           <span class="dropdown-icon">🏢</span>
@@ -338,40 +364,43 @@
           <span class="dropdown-icon">💻</span>
         </a>
       `;
-    }
-
-    document.addEventListener('click', function() {
-      const switcherBtn = document.getElementById('bravion-switcher-btn');
-      if (switcherBtn) switcherBtn.classList.remove('open');
-      dropdown.classList.remove('open');
-    });
-
-    renderBreadcrumbs();
-
-    const originalPushState = history.pushState;
-    history.pushState = function() {
-      originalPushState.apply(this, arguments);
-      setTimeout(renderBreadcrumbs, 50);
-    };
-
-    const originalReplaceState = history.replaceState;
-    history.replaceState = function() {
-      originalReplaceState.apply(this, arguments);
-      setTimeout(renderBreadcrumbs, 50);
-    };
-
-    window.addEventListener('popstate', renderBreadcrumbs);
-
-    let lastPathname = window.location.pathname;
-    setInterval(function() {
-      if (window.location.pathname !== lastPathname) {
-        lastPathname = window.location.pathname;
-        renderBreadcrumbs();
       }
-    }, 250);
 
-  })();
-</script>
+      document.addEventListener('click', function () {
+        const switcherBtn = document.getElementById('bravion-switcher-btn');
+        if (switcherBtn) switcherBtn.classList.remove('open');
+        dropdown.classList.remove('open');
+      });
+
+      renderBreadcrumbs();
+
+      const originalPushState = history.pushState;
+      history.pushState = function () {
+        originalPushState.apply(this, arguments);
+        setTimeout(renderBreadcrumbs, 50);
+      };
+
+      const originalReplaceState = history.replaceState;
+      history.replaceState = function () {
+        originalReplaceState.apply(this, arguments);
+        setTimeout(renderBreadcrumbs, 50);
+      };
+
+      window.addEventListener('popstate', renderBreadcrumbs);
+
+      let lastPathname = window.location.pathname;
+      setInterval(function () {
+        if (window.location.pathname !== lastPathname) {
+          lastPathname = window.location.pathname;
+          renderBreadcrumbs();
+        }
+      }, 250);
+
+    })();
+  </script>
 </body>
 </html>
 
+
+
+

@@ -417,6 +417,13 @@ $color-bg-accent: rgba($color-red, 0.06);
       margin: 0;
       letter-spacing: 0.02em;
     }
+
+    .footer-created {
+      font-size: 0.8rem;
+      color: $color-text-muted;
+      margin: 0.5rem 0 0 0;
+      letter-spacing: 0.02em;
+    }
   }
 }
 

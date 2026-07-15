@@ -82,11 +82,95 @@
     "image": "https://images.unsplash.com/photo-1626607315372-9111c1d0637f?w=600&auto=format&fit=crop&q=60",
     "price": "Request Quote",
     "stockStatus": "In Stock",
+    "compatiblePrinters": [
+      "HP LaserJet Pro M404",
+      "HP LaserJet Pro M428",
+      "Canon imageCLASS LBP226",
+      "Canon imageCLASS MF445",
+      "Epson EcoTank L3110",
+      "Epson EcoTank L3150",
+      "Epson EcoTank L3250",
+      "Epson LQ-310",
+      "Epson LQ-315"
+    ],
     "specs": {
       "Toner Cartridges": "High-yield replacement toner cartridges for LaserJet printers (e.g. CF259A, Canon CRG-057)",
       "Ink Systems": "Bulk bottle ink sets for Epson EcoTank and Canon MegaTank inkjets",
       "Media & Paper": "Wide-format plotter paper rolls (A0, A1), premium office paper copy boxes",
       "Dot-Matrix Ribbons": "Replacement ribbon cartridges for Epson LQ-310 and high-impact line printers"
+    }
+  },
+  {
+    "id": "eq-toner-cf259a",
+    "name": "HP CF259A Black LaserJet Toner",
+    "category": "Toners & Cartridges",
+    "subcategory": "Laser Toners",
+    "image": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=600&auto=format&fit=crop&q=60",
+    "price": "Ksh 12,500",
+    "stockStatus": "In Stock",
+    "compatiblePrinters": [
+      "HP LaserJet Pro M404",
+      "HP LaserJet Pro M428"
+    ],
+    "specs": {
+      "Yield": "3,000 pages standard",
+      "Color": "Black",
+      "OEM Code": "CF259A (59A)"
+    }
+  },
+  {
+    "id": "eq-toner-crg057",
+    "name": "Canon CRG-057 Black Toner Cartridge",
+    "category": "Toners & Cartridges",
+    "subcategory": "Laser Toners",
+    "image": "https://images.unsplash.com/photo-1595225476474-87563907a212?w=600&auto=format&fit=crop&q=60",
+    "price": "Ksh 14,000",
+    "stockStatus": "In Stock",
+    "compatiblePrinters": [
+      "Canon imageCLASS LBP226",
+      "Canon imageCLASS MF445"
+    ],
+    "specs": {
+      "Yield": "3,100 pages",
+      "Color": "Black",
+      "OEM Code": "CRG-057"
+    }
+  },
+  {
+    "id": "eq-ink-epson103",
+    "name": "Epson 103 EcoTank Bottle Set (4 Colors)",
+    "category": "Toners & Cartridges",
+    "subcategory": "Ink Bottles",
+    "image": "https://images.unsplash.com/photo-1626607315372-9111c1d0637f?w=600&auto=format&fit=crop&q=60",
+    "price": "Ksh 6,800",
+    "stockStatus": "In Stock",
+    "compatiblePrinters": [
+      "Epson EcoTank L3110",
+      "Epson EcoTank L3150",
+      "Epson EcoTank L3250"
+    ],
+    "specs": {
+      "Yield": "7,500 pages (Black), 6,000 pages (Color)",
+      "Colors Included": "Black, Cyan, Magenta, Yellow",
+      "Ink Type": "Dye-based"
+    }
+  },
+  {
+    "id": "eq-ribbon-s015639",
+    "name": "Epson C13S015639 Fabric Ribbon Cartridge",
+    "category": "Toners & Cartridges",
+    "subcategory": "Ribbons",
+    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&auto=format&fit=crop&q=60",
+    "price": "Ksh 1,500",
+    "stockStatus": "In Stock",
+    "compatiblePrinters": [
+      "Epson LQ-310",
+      "Epson LQ-315"
+    ],
+    "specs": {
+      "Ribbon Length": "10.0 meters / 32.8 feet",
+      "Color": "Black",
+      "OEM Code": "S015639 / S015589"
     }
   },
   {
@@ -199,7 +283,7 @@
     "name": "Fiber Optic Splice & Test Gear",
     "category": "Fiber Splicing & Testing",
     "subcategory": "Fiber Tools",
-    "image": "https://images.unsplash.com/photo-1601524909162-be87252be298?w=600&auto=format&fit=crop&q=60",
+    "image": "https://images.unsplash.com/photo-1601524909162-ae8725290836?w=600&auto=format&fit=crop&q=60",
     "price": "Request Quote",
     "stockStatus": "In Stock",
     "specs": {
@@ -238,5 +322,65 @@
       "Asset Tracking": "BLE tags, active RFID tracking gates, software inventory dashboard",
       "Management Desk": "Local facility dashboard integrations, Modbus/BACnet gateway modules"
     }
+  },
+  {
+    "id": "eq-fusion-splicer",
+    "name": "Bravion Pro Fusion Splicer Model F-80",
+    "category": "Fiber Splicing & Testing",
+    "subcategory": "Fiber Tools",
+    "image": "https://images.unsplash.com/photo-1601524909162-ae8725290836?w=600&auto=format&fit=crop&q=60",
+    "price": "Request Quote",
+    "stockStatus": "In Stock",
+    "specs": {
+      "Alignment Method": "Core-to-core active alignment",
+      "Splicing Time": "6 seconds average",
+      "Applicable Fibers": "Single-mode (SM), Multi-mode (MM), DS, NZDS",
+      "Package Includes": "Precision fiber cleaver, thermal stripper, carrying case"
+    }
+  },
+  {
+    "id": "eq-biometric-terminal",
+    "name": "Bravion FacePass AI Biometric Terminal",
+    "category": "Access Control & Biometrics",
+    "subcategory": "Biometric Devices",
+    "image": "https://images.unsplash.com/photo-1558002038-1055907df827?w=600&auto=format&fit=crop&q=60",
+    "price": "Ksh 45,000",
+    "stockStatus": "In Stock",
+    "specs": {
+      "Recognition": "AI Dual-Camera Facial & Fingerprint Scan",
+      "Capacity": "5,000 Face templates, 10,000 Fingerprints",
+      "Speed": "Less than 0.3 seconds per verification",
+      "Connectivity": "TCP/IP, Wi-Fi, Wiegand input/output, relay control"
+    }
+  },
+  {
+  "id": "eq-projector-mount",
+  "name": "Enterprise Projector & Ceiling Mount Kits",
+  "category": "Audio-Visual & Conference Systems",
+  "subcategory": "Mounting Hardware",
+  "image": "https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=600&auto=format&fit=crop&q=60",
+  "price": "Request Quote",
+  "stockStatus": "In Stock",
+  "specs": {
+    "Mount Types": "Universal tilt/roll ceiling mounts, extension poles, wall-arm brackets",
+    "Load Capacity": "Up to 25kg per unit, adjustable drop height",
+    "Cable Management": "Integrated conduit routing and concealed cable channels",
+    "Compatibility": "Fits most laser and lamp-based projector models"
   }
+},
+{
+  "id": "eq-solar-inverter-hybrid",
+  "name": "Hybrid Solar Inverter & Battery Bank (5kVA)",
+  "category": "Power & Backup Systems",
+  "subcategory": "Solar & UPS",
+  "image": "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600&auto=format&fit=crop&q=60",
+  "price": "Request Quote / Tender",
+  "stockStatus": "In Stock",
+  "specs": {
+    "Inverter Rating": "5kVA hybrid pure sine wave, grid-tie + off-grid modes",
+    "Battery Bank": "10kWh LiFePO4 stackable battery bank",
+    "Solar Input": "MPPT charge controller, supports up to 6kW panel array",
+    "Monitoring": "Wi-Fi app monitoring, automated load-shedding failover"
+  }
+}
 ]
